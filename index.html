@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Portofolio</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <h2 class="logo">Ridha Putri Adelia</h2>
+            <ul>
+                <li><a href="#home">Home</a></li>                
+                <li><a href="#about">About Me</a></li>                
+                <li><a href="#education">My Education</a></li>                
+                <li><a href="#contact">Contact</a></li>                
+            </ul>
+            <!-- Letakkan tombol toggle dark mode di sini -->
+            <div id="darkModeToggle">Dark Mode</div>
+        </nav>
+        <div class="content" id="home">
+            <h4>Hello! <span> I'm </span> </h4>
+            <h1>Ridha Putri Adelia</span></h1>
+            <h3>"Create a life you can't wait to wake up to"</h3>
+        </div>
+    </div>
+    <div class="about" id="about">
+        <div class="main">  
+            <img src="Desain tanpa judul (1).png" alt="">
+            <div class="about-text">
+                <h2> About me</h2>
+                <p> 
+                    Hi, I'm Ridha. I was born in Balikpapan on November 10, 2003. I'm originally from Balikpapan, but during elementary school, I moved to Malinau Regency because my father was assigned there. 
+                    I stayed in Malinau until high school, then moved to Samarinda City to continue my undergraduate studies at Mulawarman University majoring in Information Systems. 
+                    I'm interested in things related to technology and design. I want to continue learning about design so that I can create good and interesting designs.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="education" id="education">
+        <div class="title">
+            <h2>My Education</h2>
+        </div>
+        <div class="education-info">
+            <div class="education-box">
+                <div class="education-item">
+                    <i class="fas fa-school"></i>
+                    <div class="education-details">
+                        <div class="education-header">
+                            <h3>University</h3>
+                            <p>University of Mulawarman</p>
+                        </div>
+                        <p>2022 - Present</p>
+                    </div>
+                </div>  
+                <div class="education-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <div class="education-details">
+                        <div class="education-header">
+                            <h3>High School</h3>
+                            <p>SMAN 1 Malinau</p>
+                        </div>
+                        <p>2019 - 2022</p>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <div class="education-details">
+                        <div class="education-header">
+                            <h3>Junior High School</h3>
+                            <p>SMPN 2 Malinau Kota</p>
+                        </div>
+                        <p>2016 - 2019</p>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <div class="education-details">
+                        <div class="education-header">
+                            <h3>Elementary School</h3>
+                            <p>SDN 005 Malinau Kota</p>
+                        </div>
+                        <p>2010 - 2016</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="certificate-upload">
+            <div class="certificate-container">
+                <img src="426_Ins BIMA BAHASA INDONESIA-1.png" alt="">
+                <img src="1650_Math QuizSERTIFIKAT MATH QUIZ-1.png" alt="">
+                <img src="4220477268_1-1.png" alt="">
+            </div>
+        </div>
+    </div>
+    <footer id="contact">
+        <div class="contact-form">
+            <h3>Contact</h3>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div>
+            <p><br>Gmail: ridhadelia1011@gmail.com</p>
+            <div class="social">
+                <a href="https://www.instagram.com/ridha.adeliaa"><i class="fab fa-instagram"></i></a>            
+                <a href="https://wa.me/6285161027716"><i class="fab fa-whatsapp"></i></a>  
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            
+            var formData = new FormData(event.target);
+            
+            var message = "Name: " + formData.get('name') + "\n";
+            message += "Email: " + formData.get('email') + "\n";
+            message += "Message: " + formData.get('message');
+            
+            alert(message);
+        });
+    </script>
+    <script>
+       
+        function toggleDarkMode() {
+            var body = document.body;
+            body.classList.toggle('dark-mode');
+        }
+    
+        document.getElementById("darkModeToggle").addEventListener("click", function(event) {
+            toggleDarkMode(); 
+        });
+    </script>    
+</body>
+</html>
