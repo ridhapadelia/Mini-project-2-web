@@ -3,10 +3,8 @@
         "WhatsApp Image 2024-03-24 at 6.39.51 PM.jpeg",
         "Salinan dari ●●●●●●●●●●●●●●● (1).png",
         "Desain tanpa judul (3).png"
-        // Add more image URLs here if needed
     ];
 
-    // Function to create portfolio item HTML
     function createPortfolioItem(imageUrl) {
         return `
             <div class="desaign-container">
@@ -15,21 +13,17 @@
         `;
     }
 
-    // Function to render portfolio items
     function renderPortfolio() {
         const portfolioContainer = document.getElementById("portfolio-container");
 
-        // Clear previous portfolio items
         portfolioContainer.innerHTML = "";
 
-        // Loop through portfolioImages array and create portfolio items
         portfolioImages.forEach(imageUrl => {
             const portfolioItemHTML = createPortfolioItem(imageUrl);
             portfolioContainer.innerHTML += portfolioItemHTML;
         });
     }
 
-    // Call renderPortfolio function to initially render portfolio items
     renderPortfolio();
  
 // Contact Form Submission
@@ -39,7 +33,6 @@ const contactForm = document.querySelector('form');
 document.addEventListener('DOMContentLoaded', () => {
     const savedFormData = JSON.parse(localStorage.getItem('formData'));
     if (savedFormData) {
-        // Jika data formulir tersedia di local storage, isi kembali input form dengan data tersebut
         document.getElementById('name').value = savedFormData.name;
         document.getElementById('email').value = savedFormData.email;
         document.getElementById('subject').value = savedFormData.subject;
@@ -50,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    // Ambil nilai dari input form
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const subject = document.getElementById('subject').value;
@@ -68,6 +60,5 @@ contactForm.addEventListener('submit', (e) => {
     };
     localStorage.setItem('formData', JSON.stringify(formData));
 
-    // Clear form fields after submission
     contactForm.reset();
 });
